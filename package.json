@@ -1,0 +1,17 @@
+{
+  "name": "merchant-rest-api",
+  "version": "1.0.0",
+  "description": "merchant rest api that utilizing midtrans core api",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "midtrans-client": "^1.0.3"
+  }
+}
