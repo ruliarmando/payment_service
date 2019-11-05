@@ -19,13 +19,13 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (_, res) => res.json({ result: 'Payment API' }));
 
 app.post('/payment', ({ body }, res) => {
-  const { payment_type, cc_token, bank, customer_details, item_details } = body;
+  const { paymentType, ccToken, bank, customerDetails, itemDetails } = body;
   const payment = generatePayment({
-    paymentType: payment_type,
-    ccToken: cc_token,
+    paymentType,
+    ccToken,
     bank,
-    customerDetails: customer_details,
-    itemDetails: item_details,
+    customerDetails,
+    itemDetails,
   });
   coreApi.charge(payment)
     .then((response) => {
